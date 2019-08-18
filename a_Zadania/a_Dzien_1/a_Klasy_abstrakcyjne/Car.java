@@ -1,6 +1,8 @@
 package a_Zadania.a_Dzien_1.a_Klasy_abstrakcyjne;
 
-public class Car extends Vehicle {
+import b_Zadania_Domowe.b_Dzien_2.Inspectionable;
+
+public class Car extends Vehicle implements Inspectionable {
 
     private String type;
 
@@ -15,5 +17,10 @@ public class Car extends Vehicle {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    @Override
+    public void createInspection() {
+        System.out.println(type+" "+super.getModel()+" checked");
     }
 }
